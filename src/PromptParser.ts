@@ -1,6 +1,9 @@
 import { compilation } from "./compilation.js";
 import * as PP from "./prompt_parser.js";
 import { SDPromptParser as sdp } from "./types";
+import util from 'node-inspect-extracted';
+
+(window as any).util = util;
 
 interface ParseOptions {
   /**

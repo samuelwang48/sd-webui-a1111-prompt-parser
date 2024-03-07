@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  node-inspect-extracted:
+    specifier: ^3.0.1
+    version: 3.0.1
+
 devDependencies:
   '@types/node':
     specifier: ^20.4.2
@@ -877,6 +882,11 @@ packages:
       object-assign: 4.1.1
       thenify-all: 1.6.0
     dev: true
+
+  /node-inspect-extracted@3.0.1:
+    resolution: {integrity: sha512-27z/VXEpt0Kkaib9oCaFLKJ5yMvYyeVztRXCChYg4dTclNWLL1XKA/t6oHGe6T7C01aYy6mpffSZemnytSSJfQ==}
+    engines: {node: '>=16'}
+    dev: false
 
   /normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}

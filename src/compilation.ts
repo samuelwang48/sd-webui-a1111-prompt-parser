@@ -70,13 +70,13 @@ export const compilation = (node: sdp.IPromptASTNode): sdp.IPromptNode[] => {
         depth++;
       }
       const value = compilation(current);
-      return [
-        {
+      return value.map( (el: any) => {
+        return {
           type: "positive",
-          value: value[0].value,
-          args: [depth],
-        },
-      ];
+          value: el.value,
+          args: depth,
+        }
+      })
     }
     case "emphasized_negative": {
       if (!node.children) return [];
@@ -90,14 +90,13 @@ export const compilation = (node: sdp.IPromptASTNode): sdp.IPromptNode[] => {
         depth++;
       }
       const value = compilation(current);
-      return [
-        {
+      return value.map( (el: any) => {
+        return {
           type: "negative",
-          value: value[0].value,
-          args: [depth],
-        },
-      ];
-      break;
+          value: el.value,
+          args: depth,
+        }
+      })
     }
     case "emphasized_weighted": {
       if (!node.children) return [];
